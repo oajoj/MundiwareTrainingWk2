@@ -6,8 +6,8 @@ body {
 #main-logo {
     margin-left: auto;
     margin-right: 60px;
-    padding-top: 15px;
     display: block;
+    padding-top: 15px;
 }
 
 .col-xs {
@@ -50,6 +50,7 @@ body {
     margin: auto;
     max-width: 850px;
     min-width: 740px;
+    padding-right: 10px;
 }
 
 #header-top div {
@@ -60,26 +61,30 @@ body {
     display: inline-block;
 }
 
-#header-top #timeDiv{
+#header-top #timeDiv {
     float: left;
     padding-top: 8px;
+    padding-left: 10px;
 }
 
-#header-top #topLinks{
+#header-top #topLinks {
     float: right;
     padding-top: 8px;
 }
 
-#header-top #topLinks p{
+#header-top #topLinks p {
     padding-left: 5px;
     padding-right: 5px;
 }
 
-#head-menu-bar{
+#header-menu-bar {
     margin: auto;
+    max-width: 850px;
+    min-width: 740px;
 }
-#header-menu-bar a {
-    color: white;
+
+.nav-link {
+    color: white !important;
 }
 
 #header img {
@@ -87,25 +92,81 @@ body {
     margin-bottom: 20px;
 }
 
-#header-menu-bar .col-xs {
-    padding: 5px 5px 5px 5px;
+@media all and (min-width: 740px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+    .navbar .nav-item:hover .nav-link {
+        color: #fff;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0;
+    }
 }
 
-#header-menu-bar a:hover {
-    background-color: lightcoral;
+@media (max-width: 980px) {
+    #header-menu-bar {
+        max-width: 850px;
+        min-width: 740px;
+        margin-right: 100%;
+        margin-left: 0;
+    }
+    #menu-overlap {
+        position: fixed;
+        padding: 2em;
+        left: 95%;
+        top: 9.2%;
+        transform: translateX(-50%);
+    }
 }
 
-#header-menu-bar nav {
-    padding-bottom: 0px;
+@media (min-width:740px) {
+    .navbar-expand-srset>.container, .navbar-expand-srset>.container-fluid {
+        padding-right: 0;
+        padding-left: 0
+    }
 }
 
-#header-menu-bar nav a {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-@media (min-width: 850px) {
-    #header #login {
-        margin-left: 0 auto;
+@media (min-width:740px) {
+    .navbar-expand-srset {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+    .navbar-expand-srset .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+    .navbar-expand-srset .navbar-nav .dropdown-menu {
+        position: absolute
+    }
+    .navbar-expand-srset .navbar-nav .dropdown-menu-right {
+        right: 0;
+        left: auto
+    }
+    .navbar-expand-srset .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem
+    }
+    .navbar-expand-srset>.container, .navbar-expand-srset>.container-fluid {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+    }
+    .navbar-expand-srset .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important
+    }
+    .navbar-expand-srset .navbar-toggler {
+        display: none
+    }
+    .navbar {
+        flex-wrap: nowrap!important;
+        -ms-flex-wrap: nowrap!important;
     }
 }
