@@ -7,16 +7,35 @@ body {
     margin-left: 10px;
 }
 
+#upper-text div {
+    display: inline-flex;
+}
+
 #top-text {
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
     color: gray;
     padding-top: 2px;
     padding-bottom: 2px;
     background-color: rgb(235, 235, 235);
 }
 
+#top-text::-webkit-scrollbar{
+    display: none;
+}
+
+#top-text div {
+    display: inline-block;
+}
+
 #header {
     font-weight: 500;
     background-color: #206185;
+
 }
 
 #header-menu-bar a {
@@ -28,13 +47,21 @@ body {
     margin-bottom: 20px;
 }
 
-#header-top .col-xs {
-    padding-top: 10px;
-    color: white;
+#header-top{
+    max-width: 100%;
+    width: 100vw;
+    overflow: hidden;
+    overflow-x: auto;
 }
 
-#subs {
-    margin-left: 500px;
+#header-top::-webkit-scrollbar{
+    display: none;
+}
+
+#header-top div {
+    display: inline-block;
+    padding-top: 10px;
+    color: white;
 }
 
 #header-menu-bar .col-xs {
@@ -52,10 +79,4 @@ body {
 #header-menu-bar nav a {
     padding-left: 10px;
     padding-right: 10px;
-}
-
-@media (max-width: 810px) {
-    #subs {
-        margin-left: 60%;
-    }
 }
