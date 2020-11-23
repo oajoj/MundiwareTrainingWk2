@@ -3,15 +3,40 @@ body {
     font-weight: bold;
 }
 
+#main-logo {
+    margin-left: auto;
+    margin-right: 60px;
+    display: block;
+    padding-top: 15px;
+}
+
 .col-xs {
     margin-left: 10px;
 }
 
+#upper-text div {
+    display: inline-flex;
+}
+
 #top-text {
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
     color: gray;
     padding-top: 2px;
     padding-bottom: 2px;
     background-color: rgb(235, 235, 235);
+}
+
+#top-text::-webkit-scrollbar {
+    display: none;
+}
+
+#top-text div {
+    display: inline-block;
 }
 
 #header {
@@ -19,8 +44,47 @@ body {
     background-color: #206185;
 }
 
-#header-menu-bar a {
+#header-top {
     color: white;
+    text-align: center;
+    margin: auto;
+    max-width: 850px;
+    min-width: 740px;
+    padding-right: 10px;
+}
+
+#header-top div {
+    display: inline-block;
+}
+
+#header-top p {
+    display: inline-block;
+}
+
+#header-top #timeDiv {
+    float: left;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+#header-top #topLinks {
+    float: right;
+    padding-top: 8px;
+}
+
+#header-top #topLinks p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#header-menu-bar {
+    margin: auto;
+    max-width: 850px;
+    min-width: 740px;
+}
+
+.nav-link {
+    color: white !important;
 }
 
 #header img {
@@ -28,34 +92,81 @@ body {
     margin-bottom: 20px;
 }
 
-#header-top .col-xs {
-    padding-top: 10px;
-    color: white;
+@media all and (min-width: 740px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+    .navbar .nav-item:hover .nav-link {
+        color: #fff;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0;
+    }
 }
 
-#subs {
-    margin-left: 500px;
+@media (max-width: 980px) {
+    #header-menu-bar {
+        max-width: 850px;
+        min-width: 740px;
+        margin-right: 100%;
+        margin-left: 0;
+    }
+    #menu-overlap {
+        position: fixed;
+        padding: 2em;
+        left: 95%;
+        top: 9.2%;
+        transform: translateX(-50%);
+    }
 }
 
-#header-menu-bar .col-xs {
-    padding: 5px 5px 5px 5px;
+@media (min-width:740px) {
+    .navbar-expand-srset>.container, .navbar-expand-srset>.container-fluid {
+        padding-right: 0;
+        padding-left: 0
+    }
 }
 
-#header-menu-bar a:hover {
-    background-color: lightcoral;
-}
-
-#header-menu-bar nav {
-    padding-bottom: 0px;
-}
-
-#header-menu-bar nav a {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-@media (max-width: 810px) {
-    #subs {
-        margin-left: 60%;
+@media (min-width:740px) {
+    .navbar-expand-srset {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+    .navbar-expand-srset .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+    .navbar-expand-srset .navbar-nav .dropdown-menu {
+        position: absolute
+    }
+    .navbar-expand-srset .navbar-nav .dropdown-menu-right {
+        right: 0;
+        left: auto
+    }
+    .navbar-expand-srset .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem
+    }
+    .navbar-expand-srset>.container, .navbar-expand-srset>.container-fluid {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+    }
+    .navbar-expand-srset .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important
+    }
+    .navbar-expand-srset .navbar-toggler {
+        display: none
+    }
+    .navbar {
+        flex-wrap: nowrap!important;
+        -ms-flex-wrap: nowrap!important;
     }
 }
