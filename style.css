@@ -3,6 +3,13 @@ body {
     font-weight: bold;
 }
 
+#main-logo {
+    margin-left: auto;
+    margin-right: 60px;
+    padding-top: 15px;
+    display: block;
+}
+
 .col-xs {
     margin-left: 10px;
 }
@@ -24,7 +31,7 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
-#top-text::-webkit-scrollbar{
+#top-text::-webkit-scrollbar {
     display: none;
 }
 
@@ -35,9 +42,42 @@ body {
 #header {
     font-weight: 500;
     background-color: #206185;
-
 }
 
+#header-top {
+    color: white;
+    text-align: center;
+    margin: auto;
+    max-width: 850px;
+    min-width: 740px;
+}
+
+#header-top div {
+    display: inline-block;
+}
+
+#header-top p {
+    display: inline-block;
+}
+
+#header-top #timeDiv{
+    float: left;
+    padding-top: 8px;
+}
+
+#header-top #topLinks{
+    float: right;
+    padding-top: 8px;
+}
+
+#header-top #topLinks p{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#head-menu-bar{
+    margin: auto;
+}
 #header-menu-bar a {
     color: white;
 }
@@ -45,23 +85,6 @@ body {
 #header img {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-#header-top{
-    max-width: 100%;
-    width: 100vw;
-    overflow: hidden;
-    overflow-x: auto;
-}
-
-#header-top::-webkit-scrollbar{
-    display: none;
-}
-
-#header-top div {
-    display: inline-block;
-    padding-top: 10px;
-    color: white;
 }
 
 #header-menu-bar .col-xs {
@@ -79,4 +102,10 @@ body {
 #header-menu-bar nav a {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+@media (min-width: 850px) {
+    #header #login {
+        margin-left: 0 auto;
+    }
 }
