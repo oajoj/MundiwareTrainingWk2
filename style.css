@@ -152,6 +152,12 @@ hr.thick {
 }
 
 /* Standard Media Query */
+
+@media (max-width: 575px){
+    #footer-itms{
+        text-align: center;
+    }
+}
 @media (min-width: 0px) {
     .navbar-brand {
         display: none;
