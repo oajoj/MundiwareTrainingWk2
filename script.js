@@ -56,17 +56,18 @@ $(document).ready(function () {
 
     //Shows menu bar while in mobile view
     $(".navbar-toggler").click(function () {
-        if(!wasNavClicked){
+        if (!wasNavClicked) {
             $("#clickedMenu").css("display", "block");
             wasNavClicked = true;
         } else {
-            if(wasNavClicked){
+            if (wasNavClicked) {
                 $("#clickedMenu").fadeOut();
                 wasNavClicked = false;
             }
-        } 
+        }
 
     });
+
 
 
 });
