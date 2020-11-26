@@ -1,6 +1,11 @@
 /* Globals */
+
 body {
     font-size: 12px;
+}
+
+p{
+    margin: 0;
 }
 
 ul {
@@ -11,11 +16,31 @@ hr.thick {
     border: 1px solid black;
 }
 
+figure{
+    display: inline;
+    padding-top: 0;
+    margin: 0;
+}
+.custom {
+    border: none;
+    box-shadow: 0 20px 0.5rem rgba(128, 128, 128, 0.562);
+    font-size: 12px;
+    height: 570px;
+    width: 850px;
+    margin-left: -780px;
+}
+
+
+#menu-row p{
+    padding-bottom: 5px !important;
+}
 /* Header Settings */
 
-#main-logo{
+
+#main-logo {
     padding-top: 10px;
 }
+
 #lupa {
     filter: invert(100%);
 }
@@ -86,6 +111,7 @@ hr.thick {
     padding-right: 5px;
 }
 
+
 #header-menu-bar {
     margin: auto;
     max-width: 850px;
@@ -105,7 +131,22 @@ hr.thick {
     margin-bottom: 20px;
 }
 
+#circle-item{
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    width: 95px;
+}
+
+.custom a{
+    padding: 1px !important;
+}
+
+#left-menu .col-sm-12{
+    padding-left: 0px !important;
+}
 /* News-Body Settings */
+
 #news-body {
     margin: auto;
     margin-top: 80px;
@@ -130,6 +171,7 @@ hr.thick {
 }
 
 /* Footer Settings */
+
 .footer {
     margin: auto;
     text-align: center;
@@ -141,7 +183,7 @@ hr.thick {
     max-width: 850px;
 }
 
-#footer-itms p{
+#footer-itms p {
     margin-bottom: 1px;
 }
 
@@ -153,11 +195,12 @@ hr.thick {
 
 /* Standard Media Query */
 
-@media (max-width: 575px){
-    #footer-itms{
+@media (max-width: 575px) {
+    #footer-itms {
         text-align: center;
     }
 }
+
 @media (min-width: 0px) {
     .navbar-brand {
         display: none;
@@ -182,18 +225,32 @@ hr.thick {
         max-width: 100%;
         display: inline;
     }
+
+    .custom { 
+        height:unset;
+        width: unset;
+        margin-left:unset;
+    }
+
+}
+
+@media (max-width:991px){
+    .custom { 
+        height:unset;
+
+    }
 }
 
 /* Boostrap settings overlay */
-@media (min-width:900px) {
-    
+
+@media (min-width:901px) {
     .navbar .nav-item .dropdown-menu {
         display: none;
     }
     .navbar .nav-item:hover .nav-link {
         color: #fff;
     }
-    .navbar .nav-item:hover .dropdown-menu {
+    .navbar .nav-item:hover .dropdown-menu:not(.custom) {
         display: block;
     }
     .navbar .nav-item .dropdown-menu {
