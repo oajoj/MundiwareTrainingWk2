@@ -147,6 +147,12 @@ figure{
 }
 
 /* Weather */
+
+#collapseWeather{
+    width: 100vw;
+    max-width: 840px;
+
+}
 #weather div a{
     text-decoration: none;
 
