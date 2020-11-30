@@ -3,8 +3,7 @@
 $(function () {
 
     //Globals
-    var lat;
-    var long;
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     //Get user location
 
@@ -22,7 +21,7 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat="+lat+"&lon="+long,
+            url: proxyurl + "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat="+lat+"&lon="+long,
             success: function (response) {
                 const cityInfo = response.results;
                 const forec = cityInfo.forecast;
