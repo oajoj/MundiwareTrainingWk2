@@ -22,7 +22,7 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "https://api.hgbrasil.com/weather?key=43874a67&lat="+lat+"&lon="+long,
+            url: "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat="+lat+"&lon="+long,
             success: function (response) {
                 const cityInfo = response.results;
                 const forec = cityInfo.forecast;
