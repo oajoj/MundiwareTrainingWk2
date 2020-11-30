@@ -1,6 +1,6 @@
 
-// Initial first that will only run when page get ready
-$(document).ready(function () {
+// Initial function that will only run when page get ready
+$(function () {
 
     //Global variables
     var wasMenuHidden = false;
@@ -67,7 +67,5 @@ $(document).ready(function () {
         }
 
     });
-
-
 
 });

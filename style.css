@@ -145,6 +145,46 @@ figure{
 #left-menu .col-sm-12{
     padding-left: 0px !important;
 }
+
+/* Weather */
+#weather div a{
+    text-decoration: none;
+
+}
+
+#weather h5,h6{
+    margin: 0;
+    padding-bottom: 5px;
+
+}
+
+#weather hr{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+
+}
+
+#weather #collapser-card{
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+#weather #extendable-card {
+    margin-top: 0;
+    padding-top: 0;
+}
+#collapser-card{
+    margin: 5px 4px 0px 4px;
+    padding: 10px 15px 10px 15px;
+    background-color: #F3F3F3;
+    border-top: solid 1px #67B9C8;
+}
+#extendable-card{
+    margin: 0px 4px 5px 4px;
+    padding: 10px 15px 10px 15px;
+    background-color: #F3F3F3;
+}
 /* News-Body Settings */
 
 #news-body {
