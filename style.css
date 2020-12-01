@@ -4,7 +4,7 @@ body {
     font-size: 12px;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -16,11 +16,12 @@ hr.thick {
     border: 1px solid black;
 }
 
-figure{
+figure {
     display: inline;
     padding-top: 0;
     margin: 0;
 }
+
 .custom {
     border: none;
     box-shadow: 0 20px 0.5rem rgba(128, 128, 128, 0.562);
@@ -30,12 +31,11 @@ figure{
     margin-left: -780px;
 }
 
-
-#menu-row p{
+#menu-row p {
     padding-bottom: 5px !important;
 }
-/* Header Settings */
 
+/* Header Settings */
 
 #main-logo {
     padding-top: 10px;
@@ -111,7 +111,6 @@ figure{
     padding-right: 5px;
 }
 
-
 #header-menu-bar {
     margin: auto;
     max-width: 850px;
@@ -123,7 +122,12 @@ figure{
 }
 
 .nav-link {
+    transition: .2s;
     color: white !important;
+}
+
+.nav-link:hover:not(#menu-button) {
+    background-color: #1D4D67;
 }
 
 #header img {
@@ -131,47 +135,52 @@ figure{
     margin-bottom: 20px;
 }
 
-#circle-item{
+#circle-item {
     text-align: center;
     display: inline-block;
     padding: 5px;
     width: 95px;
 }
 
-.custom a{
+.custom a {
     padding: 1px !important;
 }
 
-#left-menu .col-sm-12{
+#left-menu .col-sm-12 {
     padding-left: 0px !important;
 }
 
 /* Weather */
 
-#collapseWeather{
+#collapseWeather {
     width: 100vw;
     max-width: 840px;
-
 }
-#weather div a{
+
+#weather div a {
     text-decoration: none;
-
 }
 
-#weather h5,h6{
+#weather h5, h6 {
     margin: 0;
     padding-bottom: 5px;
-
 }
 
-#weather hr{
+#collapser-card {
+    transition: .3s;
+}
+
+#collapser-card:hover {
+    background-color: #d4eaeb;
+}
+
+#weather hr {
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
-
 }
 
-#weather #collapser-card{
+#weather #collapser-card {
     margin-bottom: 0;
     padding-bottom: 10px;
 }
@@ -180,17 +189,28 @@ figure{
     margin-top: 0;
     padding-top: 0;
 }
-#collapser-card{
-    margin: 5px 4px 0px 4px;
+
+#weatherBtn {
+    transition: 0.5s;
+}
+
+#weatherBtn:hover {
+    fill: #51919c;
+    width: 3rem;
+}
+
+#collapser-card {
+    margin-top: 5px;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
 }
-#extendable-card{
-    margin: 0px 4px 5px 4px;
+
+#extendable-card {
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
 }
+
 /* News-Body Settings */
 
 #news-body {
@@ -201,8 +221,33 @@ figure{
     padding-right: 20px;
 }
 
+#none-card {
+    margin: 0 10px 0 0;
+}
+
+#ml-card {
+    margin: 20px 0 0 10px;
+    padding: 10px 15px 10px 15px;
+    background-color: #F3F3F3;
+    border-top: solid 1px #67B9C8;
+}
+
+#mr-card {
+    margin: 20px 10px 0 0;
+    padding: 10px 15px 10px 15px;
+    background-color: #F3F3F3;
+    border-top: solid 1px #67B9C8;
+}
+
+#mx-card {
+    margin: 20px 10px 0 10px;
+    padding: 10px 15px 10px 15px;
+    background-color: #F3F3F3;
+    border-top: solid 1px #67B9C8;
+}
+
 #card {
-    margin: 5px 4px 5px 4px;
+    margin-top: 20px;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
@@ -271,19 +316,25 @@ figure{
         max-width: 100%;
         display: inline;
     }
-
-    .custom { 
-        height:unset;
+    .custom {
+        height: unset;
         width: unset;
-        margin-left:unset;
+        margin-left: unset;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    #ml-card, #mr-card, #mx-card, #none-card {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }
 
-@media (max-width:991px){
-    .custom { 
-        height:unset;
-
+@media (max-width:991px) {
+    .custom {
+        height: unset;
     }
 }
 

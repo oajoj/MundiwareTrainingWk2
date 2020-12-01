@@ -2,10 +2,26 @@
 // Initial function that will only run when page get ready
 $(function () {
 
+    //Constant Variables
+    const template1 = $('#template1');
+    //debug
+    $("#teste").click(function (e) { 
+        $("#template1").clone().appendTo("#new-content");
+        
+    });
+
+    console.log(template1)
     //Global variables
     var wasMenuHidden = false;
     var wasClicked = false;
     var wasNavClicked = false;
+
+    //Check if page reached the end
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+            $("#new-content").append('lorem')
+        }
+    });
 
     // Sets "Moment" libraly to Spanish 
     moment.locale('es');
@@ -51,7 +67,6 @@ $(function () {
                 wasMenuHidden = false;
             }
         }
-
     });
 
     //Shows menu bar while in mobile view

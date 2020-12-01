@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- Boostrap stylesheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/d2b5267c49.js"></script>
     <title>EL MUNDO</title>
 </head>
 
@@ -64,7 +66,7 @@
 
             <!-- Bootstrap navbar -->
             <div id="header-menu-bar" class="row">
-                <nav class="navbar navbar-expand-srset navbar-dark">
+                <nav class="navbar navbar-expand-srset navbar-dark pb-0">
                     <a class="navbar-brand" href="#" ;>
                         <img src="img/El_Mundo_logo.svg" alt="El_Mundo_Logo" width="134px" height="17px" ;>
                     </a>
@@ -334,9 +336,19 @@
 
             <div id="weather" class="row">
                 <div id="collapser-card" class="col-sm">
-                    <a data-toggle="collapse" href="#collapseWeather">
-
-                    </a>
+                    <div class="row" data-toggle="collapse" href="#collapseWeather" style="cursor: pointer;">
+                        <div class="col-sm-12 d-flex align-items-center justify-content-between">
+                            <span id="userWeather" class=""></span>
+                            <div class="d-flex justify-content-end ">
+                                <svg id="weatherBtn" width="2em" height="2em" viewBox="0 0 16 16"
+                                    class="bi bi-three-dots-vertical" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="collapse" id="collapseWeather">
                     <div id="extendable-card">
@@ -367,7 +379,100 @@
                 </div>
             </div>
 
+            <p>template 1</p>
+            <div id="template1">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div id="mr-card" class="col-sm">
 
+                            </div>
+                            <div id="mr-card" class="col-sm-6">
+
+                            </div>
+                            <div id="card" class="col-sm">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div id="card" class="col-sm-12"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div id="mr-card" class="col-sm">
+
+                            </div>
+                            <div id="card" class="col-sm-7"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>template 2</p>
+            <div id="template2">
+                <div class="row">
+                    <div id="none-card" class="col-sm-4">
+                        <div class="row">
+                            <div id="card" class="col-sm-12">
+
+                            </div>
+                            <div id="card" class="col-sm-12">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mr-card" class="col-sm-4">
+
+                    </div>
+                    <div id="card" class="col-sm">
+
+                    </div>
+                </div>
+            </div>
+
+            <p>template 3</p>
+            <div id="template3">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div id="mr-card" class="col-sm-6">
+
+                            </div>
+                            <div id="card" class="col-sm">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6 px-0">
+                        <div id="card" class="col-sm-12">
+
+                        </div>
+                        <div id="card" class="col-sm-12">
+                            
+                        </div>
+                        <div id="card" class="col-sm-12">
+                            
+                        </div>
+                        <div id="card" class="col-sm-12">
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- 
             <div class="row justify-content-center">
                 <div id="card" class="col-sm">
                     <h1><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
@@ -433,75 +538,11 @@
                     </div>
                 </div>
             </div>
+-->
 
-            <hr>
-
-            <div class="row justify-content-center">
-                <div id="card" class="col-sm">
-                    <h1><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
-                        queda a la 1.00
-                    </h1>
-                    <span class="subtitle">JUANMA LAMET | MADRID</span>
-                    <div class="row">
-                        <div class="col-sm">
-                            <hr style="width:150px;text-align:left;margin-left:0">
-                            <p><strong>Madrid.</strong> Ve "mejorable" la estrategia para Navidad</p>
-                        </div>
-                        <div class="col-sm">
-                            <hr style="width:150px;text-align:left;margin-left:0">
-                            <p><strong>Alemania.</strong> Merkel aborda con los estados la desescalada navideña</p>
-                        </div>
-                    </div>
-                </div>
+            <div id="new-content">
+                <!-- Infinite Scroll's blank space for adding new content-->
             </div>
-
-            <div class="row">
-                <div id="card" class="col-sm">
-                    <h5><a href="#">P&R.</a> Qué puedo hacer en Navidad y qué no: sí a correr la San Silvestre, no a
-                        trasnochar en Nochevieja</h5>
-                    <p;">O | VICENTE COLL | Madrid</p>
-                </div>
-                <div id="card" class="col-sm">
-                    <div class="row">
-                        <div id="pic-card" class="col-sm">
-                            <img src="img/example.jpg" alt="standard image" class="img-thumbnail">
-                        </div>
-                        <div class="col">
-                            <h6>Adiós a cenas con padres y hermanos si somos familia humerosa</h6>
-                            <p> O | EMILIA LANDALUCE</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="card" class="col-sm">
-                    <h5><a href="#">Así es el plan de Sanidad.</a> <br> Illa plantea una vacunación escalada en tres
-                        etapas, empezando en enero</h5>
-                    <p> LAURA G. IBAÑES | Madrid</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div id="card" class="col-sm-7">
-                    <div class="col-sm" style="padding: 0px;">
-                        <h4><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
-                            queda a la 1.00
-                        </h4>
-                        <span class="subtitle">JUANMA LAMET | MADRID</span>
-                    </div>
-                </div>
-
-                <div id="" class="col-sm">
-                    <div class="row">
-                        <div id="card" class="col-sm">
-                            <h6><a href="#">Política.</a> El decreto que excluyó a Eglesias del fondo europeo era el
-                                "definitivo" en Presidencia</h6>
-                        </div>
-                        <div id="card" class="col-lg">
-                            <h6><a href="#">A contrapelo.</a> Pablo gana a Pedro</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </main> <!-- news-body end -->
 
         <!-- footer -->
@@ -621,6 +662,8 @@
     <!-- Local script -->
     <script src="script.js"></script>
     <script src="weather.js"></script>
+    <button id="teste">teste</button>
+
 </body>
 
 </html>
