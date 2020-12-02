@@ -7,8 +7,7 @@ $(function () {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     //Get user location
-
-    //Check if geolocation is supported
+        //Check if geolocation is supported
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
@@ -25,13 +24,14 @@ $(function () {
             dataType: "json",
             url: "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat=" + lat + "&lon=" + long,
             success: function (response) {
+                $("#loadingWeather").remove();
                 const cityInfo = response.results;
                 const forec = cityInfo.forecast;
                 console.log(cityInfo)
                 console.log(forec)
-                $("#userWeather").append("<h5>" + cityInfo.city_name + "</h5>" +
-                    "<h6>" + cityInfo.temp + "°C </h6>" +
-                    "<h6>" + cityInfo.description + "</h6>"
+                $("#userWeather").append("<h4>" + cityInfo.city_name + "</h4>" +
+                    "<h5>" + cityInfo.temp + "°C </h5>" +
+                    "<h5>" + cityInfo.description + "</h5>"
                 )
 
                 $("#minmax").append(
@@ -66,7 +66,8 @@ $(function () {
 
             },
             error: function (errormsg) {
-                $("#weather > div > a").append("<h5>Não foi possível determinar sua localização</h6>")
+                $("#loadingWeather").remove();
+                $("#userWeather").append("<h5>Não foi possível determinar sua localização</h5>")
             }
         });
 

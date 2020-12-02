@@ -20,7 +20,7 @@
     <div class="container-xs">
         <!-- Itens shown at the very top of the page -->
         <div id="top-text">
-            <div class="col-xs">Es noticia</div>
+            <div class="col-xs"><strong>Es noticia</strong></div>
             <div class="col-xs">Coronavirus</div>
             <div class="col-xs">Ley Celaá</div>
             <div class="col-xs">Mask Singer</div>
@@ -338,7 +338,14 @@
                 <div id="collapser-card" class="col-sm">
                     <div class="row" data-toggle="collapse" href="#collapseWeather" style="cursor: pointer;">
                         <div class="col-sm-12 d-flex align-items-center justify-content-between">
-                            <span id="userWeather" class=""></span>
+                            <span id="userWeather" class="">
+                                <div id="loadingWeather" class="d-flex justify-content-start">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <h5 class="ml-3 mt-1">Verificando sua localização</h5>
+                                </div>
+                            </span>
                             <div class="d-flex justify-content-end ">
                                 <svg id="weatherBtn" width="2em" height="2em" viewBox="0 0 16 16"
                                     class="bi bi-three-dots-vertical" fill="currentColor"
@@ -379,72 +386,158 @@
                 </div>
             </div>
 
-            <p>template 1</p>
-            <div id="template1">
+            <!-- Hidden Dynamic Templates -->
+            <div id="template1" class="">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
-                            <div id="mr-card" class="col-sm">
-
+                            <div class="col-sm def-card mr-2">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="mr-card" class="col-sm-6">
-
+                            <div class="col-sm-6 def-card mr-2">
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p class="h6">Some links HERE</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="card" class="col-sm">
-
+                            <div class="col-sm def-card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-12">
                         <div class="row">
-                            <div id="card" class="col-sm-12"></div>
+                            <div class="col-sm-12 def-card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-sm-12">
                         <div class="row">
-                            <div id="mr-card" class="col-sm">
-
+                            <div class="col-sm def-card mr-2">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="card" class="col-sm-7"></div>
+                            <div class="col-sm-7 def-card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <p>template 2</p>
-            <div id="template2">
+            <div id="template2" class="">
                 <div class="row">
-                    <div id="none-card" class="col-sm-4">
+                    <div class="col-sm-4 none-card">
                         <div class="row">
-                            <div id="card" class="col-sm-12">
-
+                            <div class="col-sm-12 def-card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="card" class="col-sm-12">
-
+                            <div class="col-sm-12 def-card">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h6">Some links here</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="mr-card" class="col-sm-4">
-
+                    <div class="col-sm-4 def-card  mr-2">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                            </div>
+                            <div class="col-sm-12 d-flex align-items-end">
+                                <p class="h6">Some links here</p>
+                            </div>
+                        </div>
                     </div>
-                    <div id="card" class="col-sm">
-
+                    <div class="col-sm def-card">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                            </div>
+                            <div class="col-sm-12 d-flex align-items-end">
+                                <p class="h6">Some links here</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <p>template 3</p>
-            <div id="template3">
+            <div id="template3" class="">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="row">
-                            <div id="mr-card" class="col-sm-6">
-
+                            <div class="col-sm-6 def-card mr-2">
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p class="h6">Some links HERE</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="card" class="col-sm">
-
+                            <div class="col-sm def-card">
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex align-items-end">
+                                        <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p class="h6">Some links HERE</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -453,28 +546,54 @@
                 <div class="row">
 
                     <div class="col-sm-6 px-0">
-                        <div id="card" class="col-sm-12">
-
+                        <div class="col-sm-12 def-card">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex align-items-end">
+                                    <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p class="h6">Some links HERE</p>
+                                </div>
+                            </div>
                         </div>
-                        <div id="card" class="col-sm-12">
-                            
+                        <div class="col-sm-12 def-card">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex align-items-end">
+                                    <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p class="h6">Some links HERE</p>
+                                </div>
+                            </div>
                         </div>
-                        <div id="card" class="col-sm-12">
-                            
+                        <div class="col-sm-12 def-card">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex align-items-end">
+                                    <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p class="h6">Some links HERE</p>
+                                </div>
+                            </div>
                         </div>
-                        <div id="card" class="col-sm-12">
-                            
+                        <div class="col-sm-12 def-card">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex align-items-end">
+                                    <p class="h4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p class="h6">Some links HERE</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-
-
-            <!-- 
+            <!--
             <div class="row justify-content-center">
-                <div id="card" class="col-sm">
+                <div class="col-sm def-card">
                     <h1><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
                         queda a la 1.00
                     </h1>
@@ -493,12 +612,12 @@
             </div>
 
             <div class="row">
-                <div id="card" class="col-sm">
+                <div class="col-sm def-card">
                     <h5><a href="#">P&R.</a> Qué puedo hacer en Navidad y qué no: sí a correr la San Silvestre, no a
                         trasnochar en Nochevieja</h5>
                     <p;">O | VICENTE COLL | Madrid</p>
                 </div>
-                <div id="card" class="col-sm">
+                <div class="col-sm def-card ml-2">
                     <div class="row">
                         <div id="pic-card" class="col-sm">
                             <img src="img/example.jpg" alt="standard image" class="img-thumbnail">
@@ -509,7 +628,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="card" class="col-sm">
+                <div class="col-sm def-card ml-2">
                     <h5><a href="#">Así es el plan de Sanidad.</a> <br> Illa plantea una vacunación escalada en tres
                         etapas, empezando en enero</h5>
                     <p> LAURA G. IBAÑES | Madrid</p>
@@ -517,7 +636,7 @@
             </div>
 
             <div class="row">
-                <div id="card" class="col-sm-7">
+                <div class="col-sm-7 def-card">
                     <div class="col-sm" style="padding: 0px;">
                         <h4><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
                             queda a la 1.00
@@ -526,13 +645,13 @@
                     </div>
                 </div>
 
-                <div id="" class="col-sm">
+                <div class="col-sm">
                     <div class="row">
-                        <div id="card" class="col-sm">
+                        <div class="col-sm def-card ml-2">
                             <h6><a href="#">Política.</a> El decreto que excluyó a Eglesias del fondo europeo era el
                                 "definitivo" en Presidencia</h6>
                         </div>
-                        <div id="card" class="col-lg">
+                        <div class="col-lg def-card ml-2">
                             <h6><a href="#">A contrapelo.</a> Pablo gana a Pedro</h6>
                         </div>
                     </div>
@@ -662,8 +781,6 @@
     <!-- Local script -->
     <script src="script.js"></script>
     <script src="weather.js"></script>
-    <button id="teste">teste</button>
-
 </body>
 
 </html>

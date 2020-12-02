@@ -1,27 +1,34 @@
-
 // Initial function that will only run when page get ready
 $(function () {
 
     //Constant Variables
     const template1 = $('#template1');
-    //debug
-    $("#teste").click(function (e) { 
-        $("#template1").clone().appendTo("#new-content");
-        
-    });
 
-    console.log(template1)
+    //Return random number between 1 and 3
+    function getRandomInt() { 
+        return (Math.floor(Math.random() * 3) + 1)
+    }
+
+    //Insert random template block
+    function insertTemplate(index) { 
+        var clone = $("#template" + index).clone().removeAttr('id').removeClass("d-none");
+        $("#new-content").append(clone);
+        
+    }
+
     //Global variables
     var wasMenuHidden = false;
     var wasClicked = false;
     var wasNavClicked = false;
 
     //Check if page reached the end
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
-            $("#new-content").append('lorem')
+    
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+            insertTemplate(getRandomInt());
         }
-    });
+     });
+     
 
     // Sets "Moment" libraly to Spanish 
     moment.locale('es');

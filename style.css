@@ -1,7 +1,7 @@
 /* Globals */
 
-body {
-    font-size: 12px;
+html {
+    font-size: 13px;
 }
 
 p {
@@ -221,49 +221,49 @@ figure {
     padding-right: 20px;
 }
 
-#none-card {
+.none-card {
     margin: 0 10px 0 0;
 }
 
-#ml-card {
+.ml-card {
     margin: 20px 0 0 10px;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
 }
 
-#mr-card {
+.mr-card {
     margin: 20px 10px 0 0;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
 }
 
-#mx-card {
+.mx-card {
     margin: 20px 10px 0 10px;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
 }
 
-#card {
+.def-card {
     margin-top: 20px;
     padding: 10px 15px 10px 15px;
     background-color: #F3F3F3;
     border-top: solid 1px #67B9C8;
 }
 
-#pic-card {
+.pic-card {
     float: left;
 }
 
-#pic-card img {
+.pic-card img {
     display: block;
 }
 
 /* Footer Settings */
 
-.footer {
+footer {
     margin: auto;
     text-align: center;
 }
@@ -325,7 +325,7 @@ figure {
 }
 
 @media (max-width: 575px) {
-    #ml-card, #mr-card, #mx-card, #none-card {
+    .ml-card, .mr-card, .mx-card, .none-card {
         margin-left: 0;
         margin-right: 0;
     }
