@@ -24,30 +24,15 @@ figure {
 
 .custom {
     border: none;
-    box-shadow: 0 5px 0.5rem rgba(128, 128, 128, 0.562);
+    box-shadow: 0 20px 0.5rem rgba(128, 128, 128, 0.562);
     font-size: 12px;
     height: 570px;
     width: 850px;
     margin-left: -780px;
 }
 
-.clear-link a{
-    color: gray;
-}
-
-.clear-link a:hover{
-    text-decoration: none;
-}
-
 #menu-row p {
     padding-bottom: 5px !important;
-}
-
-/* OwlCaroulse */
-.owl-carousel .item {
-    height: 10rem;
-    background: #4DC7A0;
-    padding: 1rem;
 }
 
 /* Header Settings */
@@ -56,20 +41,6 @@ figure {
     padding-top: 10px;
 }
 
-#login:hover{
-    cursor: pointer;
-    color: rgb(231, 231, 231);
-}
-
-#insc:hover {
-    cursor: pointer;
-    color: rgb(231, 231, 231);
-}
-
-#lupa:hover {
-    cursor: pointer;
-
-}
 #lupa {
     filter: invert(100%);
 }
@@ -312,7 +283,6 @@ footer {
     font-size: 9px;
     max-width: 850px;
 }
-
 
 /* Standard Media Query */
 

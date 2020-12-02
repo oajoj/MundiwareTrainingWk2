@@ -1,63 +1,40 @@
 // Initial function that will only run when page get ready
 $(function () {
 
+    //Constant Variables
+    const template1 = $('#template1');
+
+    //Return random number between 1 and 3
+    function getRandomInt() { 
+        return (Math.floor(Math.random() * 3) + 1)
+    }
+
+    //Insert random template block
+    function insertTemplate(index) { 
+        var clone = $("#template" + index).clone().removeAttr('id').removeClass("d-none");
+        $("#new-content").append(clone);
+        
+    }
+
     //Global variables
     var wasMenuHidden = false;
     var wasClicked = false;
     var wasNavClicked = false;
+
+    //Check if page reached the end
+    
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+            insertTemplate(getRandomInt());
+        }
+     });
+     
 
     // Sets "Moment" libraly to Spanish 
     moment.locale('es');
 
     // Getting current time and setting it to the mentioned div
     $('#timeDiv').text(moment().format("dddd, D [de] MMMM [de] YYYY"));
-
-    //StartUp Carousel
-    function setCarousel() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    }
-
-    //Return random number between 1 and 3
-    function getRandomInt() {
-        return (Math.floor(Math.random() * 4) + 1)
-    }
-
-    //Insert random template
-    function insertTemplate(index) {
-        var clone = $("#template" + index).clone().removeAttr('id').removeClass("d-none");
-        $("#new-content").append(clone);
-
-    }
-
-    //Check if page reached the end
-    $(window).scroll(function () {
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 900) {
-            var index = getRandomInt();
-            if (index == 4) {
-                insertTemplate(index);
-                setCarousel();
-            } else {
-                insertTemplate(index);
-            }
-
-        }
-    });
 
     //Change menu button color after click
     $("#menu-button").click(function () {
