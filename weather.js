@@ -2,8 +2,8 @@
 // Initial function that will only run when page get ready
 $(function () {
 
-
     //Globals
+        //ProxyUrl that should avoid CORS Policy block
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     //Get user location
@@ -19,16 +19,15 @@ $(function () {
         lat = position.coords.latitude;
         long = position.coords.longitude;
 
+        //Call API and get weather forecast based on lat and long
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: proxyurl + "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat=" + lat + "&lon=" + long,
+            url: "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat=${lat}&lon=${long}&user_ip=remote",
             success: function (response) {
                 $("#loadingWeather").remove();
                 const cityInfo = response.results;
                 const forec = cityInfo.forecast;
-                console.log(cityInfo)
-                console.log(forec)
                 $("#userWeather").append("<h4>" + cityInfo.city_name + "</h4>" +
                     "<h5>" + cityInfo.temp + "°C </h5>" +
                     "<h5>" + cityInfo.description + "</h5>"
@@ -65,9 +64,12 @@ $(function () {
 
 
             },
+
             error: function (errormsg) {
                 $("#loadingWeather").remove();
-                $("#userWeather").append("<h5>Não foi possível determinar sua localização</h5>")
+                $("#userWeather").append("<h5>Não foi possível determinar sua localização</h5>" +
+                "<h6>" + errormsg.statusText + "</h6>"
+                )
             }
         });
 

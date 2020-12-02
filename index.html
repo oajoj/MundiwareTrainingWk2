@@ -12,7 +12,10 @@
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <script src="https://kit.fontawesome.com/d2b5267c49.js"></script>
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+
     <title>EL MUNDO</title>
 </head>
 
@@ -21,18 +24,18 @@
         <!-- Itens shown at the very top of the page -->
         <div id="top-text">
             <div class="col-xs"><strong>Es noticia</strong></div>
-            <div class="col-xs">Coronavirus</div>
-            <div class="col-xs">Ley Celaá</div>
-            <div class="col-xs">Mask Singer</div>
-            <div class="col-xs">Echenique</div>
-            <div class="col-xs">Black Friday</div>
-            <div class="col-xs">Latin Grammy</div>
-            <div class="col-xs">Vox</div>
-            <div class="col-xs">Cataluna</div>
-            <div class="col-xs">Andalucía</div>
-            <div class="col-xs">Valencia</div>
-            <div class="col-xs">Galicia</div>
-            <div class="col-xs">PS5</div>
+            <div class="col-xs clear-link"><a href="#">Coronavirus</a></div>
+            <div class="col-xs clear-link"><a href="#">Ley Celaá</a></div>
+            <div class="col-xs clear-link"><a href="#">Mask Singer</a></div>
+            <div class="col-xs clear-link"><a href="#">Echenique</a></div>
+            <div class="col-xs clear-link"><a href="#">Black Friday</a></div>
+            <div class="col-xs clear-link"><a href="#">Latin Grammy</a></div>
+            <div class="col-xs clear-link"><a href="#">Vox</a></div>
+            <div class="col-xs clear-link"><a href="#">Cataluna</a></div>
+            <div class="col-xs clear-link"><a href="#">Andalucía</a></div>
+            <div class="col-xs clear-link"><a href="#">Valencia</a></div>
+            <div class="col-xs clear-link"><a href="#">Galicia</a></div>
+            <div class="col-xs clear-link"><a href="#">PS5</a></div>
         </div>
 
         <!-- Header -->
@@ -43,12 +46,14 @@
 
                 <!-- Div which will receive the current time -->
                 <div id="timeDiv">
-                    x,x,x
+                    date month year
                 </div>
 
                 <!-- Div which contain the main logo-->
                 <div id="main-logo">
-                    <img src="img/El_Mundo_logo.svg" alt="El_Mundo_Logo" width="210px" height="28px" ;>
+                    <a href="#">
+                        <img src="img/El_Mundo_logo.png" alt="El_Mundo_Logo" width="210px" height="28px" ;>
+                    </a>
                 </div>
 
                 <!-- Subscription itens -->
@@ -68,7 +73,7 @@
             <div id="header-menu-bar" class="row">
                 <nav class="navbar navbar-expand-srset navbar-dark pb-0">
                     <a class="navbar-brand" href="#" ;>
-                        <img src="img/El_Mundo_logo.svg" alt="El_Mundo_Logo" width="134px" height="17px" ;>
+                        <img src="img/El_Mundo_logo.png" alt="El_Mundo_Logo" width="134px" height="17px" ;>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
                         <span class="navbar-toggler-icon"></span>
@@ -309,7 +314,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <div class="pl-2 py-2 mt-3 bg-secondary text-white">
+                                            <div class="pl-2 py-2 mt-3 text-black">
                                                 <p>&copy; <i>Unidad Editorial Información General, S.L.U Avda San
                                                         Luis
                                                         25 - 28033 Madrid</i></p> <br>
@@ -333,6 +338,18 @@
 
         <!-- Body's part which will contain some of news' cards -->
         <main id="news-body">
+
+            <!-- OwlCarousel -->
+            <!-- Set up your HTML -->
+            <div id="template4" class="owl-carousel owl-theme mt-4 mb-1 d-none">
+                <div class="item"> </div>
+                <div class="item"> </div>
+                <div class="item"> </div>
+                <div class="item"> </div>
+                <div class="item"> </div>
+                <div class="item"> </div>
+                <div class="item"> </div>
+            </div>
 
             <div id="weather" class="row">
                 <div id="collapser-card" class="col-sm">
@@ -591,74 +608,6 @@
                 </div>
             </div>
 
-            <!--
-            <div class="row justify-content-center">
-                <div class="col-sm def-card">
-                    <h1><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
-                        queda a la 1.00
-                    </h1>
-                    <span class="subtitle">JUANMA LAMET | MADRID</span>
-                    <div class="row">
-                        <div class="col-sm">
-                            <hr style="width:150px;text-align:left;margin-left:0">
-                            <p><strong>Madrid.</strong> Ve "mejorable" la estrategia para Navidad</p>
-                        </div>
-                        <div class="col-sm">
-                            <hr style="width:150px;text-align:left;margin-left:0">
-                            <p><strong>Alemania.</strong> Merkel aborda con los estados la desescalada navideña</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm def-card">
-                    <h5><a href="#">P&R.</a> Qué puedo hacer en Navidad y qué no: sí a correr la San Silvestre, no a
-                        trasnochar en Nochevieja</h5>
-                    <p;">O | VICENTE COLL | Madrid</p>
-                </div>
-                <div class="col-sm def-card ml-2">
-                    <div class="row">
-                        <div id="pic-card" class="col-sm">
-                            <img src="img/example.jpg" alt="standard image" class="img-thumbnail">
-                        </div>
-                        <div class="col">
-                            <h6>Adiós a cenas con padres y hermanos si somos familia humerosa</h6>
-                            <p> O | EMILIA LANDALUCE</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm def-card ml-2">
-                    <h5><a href="#">Así es el plan de Sanidad.</a> <br> Illa plantea una vacunación escalada en tres
-                        etapas, empezando en enero</h5>
-                    <p> LAURA G. IBAÑES | Madrid</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-7 def-card">
-                    <div class="col-sm" style="padding: 0px;">
-                        <h4><a href="#">Navidad.</a> Cenas de Nochebuena y Nochevieja de seis personas máximo y toque de
-                            queda a la 1.00
-                        </h4>
-                        <span class="subtitle">JUANMA LAMET | MADRID</span>
-                    </div>
-                </div>
-
-                <div class="col-sm">
-                    <div class="row">
-                        <div class="col-sm def-card ml-2">
-                            <h6><a href="#">Política.</a> El decreto que excluyó a Eglesias del fondo europeo era el
-                                "definitivo" en Presidencia</h6>
-                        </div>
-                        <div class="col-lg def-card ml-2">
-                            <h6><a href="#">A contrapelo.</a> Pablo gana a Pedro</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
--->
-
             <div id="new-content">
                 <!-- Infinite Scroll's blank space for adding new content-->
             </div>
@@ -777,6 +726,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- OwlCaroulse JS -->
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
 
     <!-- Local script -->
     <script src="script.js"></script>
