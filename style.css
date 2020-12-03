@@ -45,8 +45,7 @@ figure {
 
 /* OwlCaroulse */
 .owl-carousel .item {
-    height: 10rem;
-    background: #4DC7A0;
+    width: 96%;
     padding: 1rem;
 }
 

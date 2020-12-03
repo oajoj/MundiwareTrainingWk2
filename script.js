@@ -16,16 +16,22 @@ $(function () {
     function setCarousel() {
         $('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 10,
+            margin: 0,
+            autoWidth: false,
+            nav: false,
+            dots: false,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
             responsive: {
                 0: {
                     items: 1
                 },
                 600: {
-                    items: 3
+                    items: 2
                 },
                 1000: {
-                    items: 5
+                    items: 3
                 }
             }
         })
