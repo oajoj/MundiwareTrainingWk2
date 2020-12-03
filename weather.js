@@ -23,7 +23,7 @@ $(function () {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: proxyurl + "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat=${lat}&lon=${long}&user_ip=remote",
+            url: proxyurl + "https://api.hgbrasil.com/weather?format=json-cors&key=43874a67&lat=" + lat + "&lon=" + long + "&user_ip=remote",
             success: function (response) {
                 $("#loadingWeather").remove();
                 const cityInfo = response.results;
