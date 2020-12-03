@@ -5,6 +5,21 @@ $(function () {
     var wasMenuHidden = false;
     var wasClicked = false;
     var wasNavClicked = false;
+    const apiKey = 'da15aff893114def837c7eec3c2d0f64'
+    const url = 'http://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=da15aff893114def837c7eec3c2d0f64'
+
+    //Get Google News
+    fetch(url).then((res) => {
+        return res.json()
+    }).then((data) => {
+        console.log(data)
+        console.log(data.articles[0])
+    })
+
+    //Insert news within selected div (test)
+    function insertNews(div){
+        console.log(div)
+    }
 
     // Sets "Moment" libraly to Spanish 
     moment.locale('es');
@@ -45,6 +60,7 @@ $(function () {
     //Insert random template
     function insertTemplate(index) {
         var clone = $("#template" + index).clone().removeAttr('id').removeClass("d-none");
+        insertNews(clone);
         $("#new-content").append(clone);
 
     }
