@@ -50,6 +50,15 @@ figure {
     padding: 1rem;
 }
 
+/* Bootstrap Override */
+.card {
+    background-color: #F3F3F3;
+    border-color: #66B9C7 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+}
+
 /* Header Settings */
 
 #main-logo {
@@ -255,32 +264,17 @@ figure {
 }
 
 .ml-card {
-    margin: 20px 0 0 10px;
-    padding: 10px 15px 10px 15px;
-    background-color: #F3F3F3;
-    border-top: solid 1px #67B9C8;
+    margin: 0 0 0 10px;
 }
 
 .mr-card {
-    margin: 20px 10px 0 0;
-    padding: 10px 15px 10px 15px;
-    background-color: #F3F3F3;
-    border-top: solid 1px #67B9C8;
+    margin: 0 10px 0 0;
 }
 
 .mx-card {
-    margin: 20px 10px 0 10px;
-    padding: 10px 15px 10px 15px;
-    background-color: #F3F3F3;
-    border-top: solid 1px #67B9C8;
+    margin: 0 10px 0 10px;
 }
 
-.def-card {
-    margin-top: 20px;
-    padding: 10px 15px 10px 15px;
-    background-color: #F3F3F3;
-    border-top: solid 1px #67B9C8;
-}
 
 .pic-card {
     float: left;
